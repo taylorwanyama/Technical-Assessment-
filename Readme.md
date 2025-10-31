@@ -11,17 +11,17 @@ This project analyzes a simulated clinical dataset to predict patient response t
 ## Dataset Description
 
 ### Simulated Clinical Trial Data
-- **Sample Size:** 500 subjects
+- **Sample Size:** 600 subjects
 - **Study Design:** Simulated Phase 2/3 clinical trial with three dose levels
 
 ### Variables
 
 | Variable | Type | Description | Range/Values |
 |----------|------|-------------|--------------|
-| ID | Integer | Subject identifier | 1-150 |
-| DOSE | Numeric | Drug dose (mg) | 50, 100, 200 |
-| AGE | Numeric | Patient age (years) | 18-80 |
-| WT | Numeric | Body weight (kg) | 40-120 |
+| ID | Integer | Subject identifier | 1-600 |
+| DOSE | Numeric | Drug dose (mg) |  100, 200, 400 |
+| AGE | Numeric | Patient age (years) | 18-85 |
+| WT | Numeric | Body weight (kg) | 45-120 |
 | SEX | Categorical | Biological sex | M, F |
 | CMAX | Numeric | Maximum plasma concentration | Continuous |
 | AUC | Numeric | Area under concentration-time curve | Continuous |
@@ -66,8 +66,8 @@ This project analyzes a simulated clinical dataset to predict patient response t
   - Categorical encoding: SEX (M=1, F=0)
   - Feature scaling: StandardScaler
 - **Data splitting:**
-  - 80% training (120 samples)
-  - 20% test (30 samples)
+  - 80% training (480 samples)
+  - 20% test (120 samples)
   - Stratified by RESPONSE to maintain class balance
 - **Outputs:**
   - `data/imputed_data.csv`
