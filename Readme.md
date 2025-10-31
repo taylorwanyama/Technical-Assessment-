@@ -77,30 +77,13 @@ This project analyzes a simulated clinical dataset to predict patient response t
 ### 4. Model Training (`04_train_models.py`)
 Two models trained and compared:
 
-#### Model 1: Logistic Regression 
-- **Purpose:** Interpretable model for understanding predictor effects
-- **Configuration:**
-  - Solver: lbfgs
-  - Class weights: balanced
-  - Max iterations: 1000
-- **Key Coefficients:**
-  - [Results will vary based on simulation]
-  - Coefficients indicate direction and magnitude of effects
-
+#### Model 1: Logistic Regression
 #### Model 2: Random Forest Classifier
-- **Purpose:** High-performance predictive model
-- **Configuration:**
-  - Trees: 100
-  - Max depth: 10
-  - Class weights: balanced
-- **Feature Importance:**
-  - [Results will vary based on simulation]
-  - Identifies most influential predictors
+
 
 ### 5. Model Evaluation
 - **Metrics:** Accuracy, Precision, Recall, F1-Score, AUC-ROC
 - **Diagnostics:** ROC curves, confusion matrices, classification reports
-- **Overfitting check:** Train vs test performance comparison
 - **Outputs:**
   - `results/tables/model_performance.csv`
   - ROC curves and comparison plots
@@ -126,7 +109,7 @@ Two models trained and compared:
 ### Setup Instructions
 ```bash
 # 1. Clone repository
-git clone <https://github.com/taylorwanyama/Technical-Assessment->
+git clone https://github.com/taylorwanyama/Technical-Assessment-
 cd project_root
 
 # 2. Install dependencies
@@ -139,19 +122,8 @@ pip install -r requirements.txt
 
 ### Complete Pipeline (Recommended)
 ```bash
-# Run all steps in sequence
-python src/_simulate_data.py
-python scripts/02_run_eda.py
-python scripts/03_preprocess.py
-python scripts/04_train_models.py
-
-# Start API
-python scripts/05_api.py
-```
-
-### Individual Steps
-```bash
 # Step 1: Simulate data
+python src\data_utils.py
 python scripts/01_simulate_data.py
 
 # Step 2: Exploratory analysis
@@ -337,6 +309,7 @@ All results are reproducible using:
 
 To reproduce exactly:
 ```bash
+python src\data_utils.py
 python scripts/01_simulate_data.py  
 python scripts/02_run_eda.py
 python scripts/03_preprocess.py     
@@ -344,12 +317,3 @@ python scripts/04_train_models.py
 ```
 
 ---
-
-## Contact & Support
-
-For questions or issues:
-1. Check documentation in each script's docstrings
-2. Examine generated figures for visual diagnostics
-
----
-
