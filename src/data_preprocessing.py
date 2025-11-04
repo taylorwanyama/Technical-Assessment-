@@ -82,7 +82,7 @@ class ClinicalDataPreprocessor:
         all_cols = numeric_cols + categorical_cols
         df_processed[all_cols] = self.numeric_imputer.fit_transform(df_processed[all_cols])
         
-        # Scale numeric features if requested
+        # Scale numeric features 
         if scale and len(numeric_cols) > 0:
             self.scaler = StandardScaler()
             df_processed[numeric_cols] = self.scaler.fit_transform(df_processed[numeric_cols])
