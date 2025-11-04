@@ -41,7 +41,7 @@ This project analyzes a simulated clinical dataset to predict patient response t
   - CMAX depends on DOSE and body weight
   - AUC correlates with CMAX
   - RESPONSE follows logistic exposure-response relationship
-- Introduces 25% MCAR missingness
+- Introduces 25% missingness
 - **Output:** `data/simulated_data.csv`
 
 ### 2. Exploratory Data Analysis (`02_run_eda.py`)
@@ -232,7 +232,7 @@ project_root/
 **Choice: 80/20 stratified split**
 - **Rationale:** Standard for datasets of this size
 - **Stratification:** Maintains class balance in both sets
-- **No validation set:** Would leave too few test samples (150 total)
+
 
 ### 4. Feature Scaling
 **Choice: StandardScaler (Z-score normalization)**
