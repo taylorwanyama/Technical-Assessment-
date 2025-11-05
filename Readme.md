@@ -125,19 +125,19 @@ pip install -r requirements.txt
 [Note: Start by executing all the files under src] 
 # Step 1: Simulate data
 python src\data_utils.py
-python scripts/01_simulate_data.py
+python scripts\01_simulate_data.py
 
 # Step 2: Exploratory analysis
-python scripts/02_run_eda.py
+python scripts\02_run_eda.py
 
 # Step 3: Preprocessing
-python scripts/03_preprocess.py
+python scripts\03_preprocess.py
 
 # Step 4: Model training
-python scripts/04_train_models.py
+python scripts\04_train_models.py
 
 # Step 5: API 
-python scripts/05_api.py
+python scripts\05_api.py
 ```
 ---
 
@@ -311,10 +311,10 @@ All results are reproducible using:
 To reproduce exactly:
 ```bash
 python src\data_utils.py
-python scripts/01_simulate_data.py  
-python scripts/02_run_eda.py
-python scripts/03_preprocess.py     
-python scripts/04_train_models.py
+python scripts\01_simulate_data.py  
+python scripts\02_run_eda.py
+python scripts\03_preprocess.py     
+python scripts\04_train_models.py
 python scripts\05_api.py 
 [Note: You need to execute all the files under src before executing the above]   
 ```
